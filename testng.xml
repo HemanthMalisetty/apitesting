@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="RegressionPack">
+	<listeners>
+        <listener class-name="com.edr.testnglisteners.TestListener" />
+    </listeners>
+	<test name="edr case creation">
+		<parameter name="paramname" value="paramvalue"/>
+		<groups>
+			<dependencies>
+				<group name="API_THREE" depends-on="API_TWO"/>
+				<group name="API_FOUR" depends-on="API_TWO"/>
+			</dependencies>
+		</groups>
+		<classes>
+			<class name="com.edr.businesscomponents.EdrCaseCreation">
+				<methods>
+					<include name="API_ONE"/>
+					<include name="API_TWO"/>
+					<include name="API_THREE"/>
+					<include name="API_FOUR"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="digitalflow">
+		<parameter name="paramname" value="paramvalue"/>
+		<groups>
+			<dependencies>
+				<group name="API_SEVEN" depends-on="API_SIX"/>
+			</dependencies>
+		</groups>
+		<classes>
+			<class name="com.edr.businesscomponents.EdrDigitalFlow">
+				<methods>
+					<include name="API_FIVE"/>
+					<include name="API_SIX"/>
+					<include name="API_SEVEN"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
