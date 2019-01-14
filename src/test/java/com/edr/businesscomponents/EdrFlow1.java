@@ -32,7 +32,7 @@ public class EdrFlow1 extends BaseClass {
 	@Test (groups={"API_Method"},dataProvider="dataProvider")
 	public void API_Method(TestDataOneModel testDataOne) {
 		/*
-		 * Call all you APIs here and handle dependencies between APIs by setting canContinue by end of each API
+		 * Call all your APIs here and handle dependencies between APIs by setting canContinue by end of each API
 		 * Create as many static variables as needed to share data between methods
 		 */
 		edrFlow1 = new EdrFlow1();

@@ -2,23 +2,27 @@
 <testng-results skipped="0" failed="10" ignored="0" total="10" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="RegressionPack" duration-ms="2640" started-at="2019-01-09T07:43:51Z" finished-at="2019-01-09T07:43:54Z">
+  <suite name="RegressionPack" duration-ms="2435" started-at="2019-01-14T07:03:20Z" finished-at="2019-01-14T07:03:23Z">
     <groups>
       <group name="API_Method">
-        <method signature="EdrFlow1.API_Method(com.edr.models.TestDataOneModel)[pri:0, instance:com.edr.businesscomponents.EdrFlow1@31f924f5]" name="API_Method" class="com.edr.businesscomponents.EdrFlow1"/>
+        <method signature="EdrFlow1.API_Method(com.edr.models.TestDataOneModel)[pri:0, instance:com.edr.businesscomponents.EdrFlow1@5c18298f]" name="API_Method" class="com.edr.businesscomponents.EdrFlow1"/>
       </group> <!-- API_Method -->
     </groups>
-    <test name="Exception_1" duration-ms="2640" started-at="2019-01-09T07:43:51Z" finished-at="2019-01-09T07:43:54Z">
+    <test name="Exception_1" duration-ms="2435" started-at="2019-01-14T07:03:20Z" finished-at="2019-01-14T07:03:23Z">
       <class name="com.edr.businesscomponents.EdrFlow1">
-        <test-method status="PASS" signature="init()[pri:0, instance:com.edr.businesscomponents.EdrFlow1@31f924f5]" name="init" is-config="true" duration-ms="736" started-at="2019-01-09T07:43:50Z" finished-at="2019-01-09T07:43:51Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.edr.businesscomponents.EdrFlow1@5c18298f]" name="init" is-config="true" duration-ms="725" started-at="2019-01-14T07:03:20Z" finished-at="2019-01-14T07:03:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="FAIL" signature="API_Method(com.edr.models.TestDataOneModel)[pri:0, instance:com.edr.businesscomponents.EdrFlow1@31f924f5]" name="API_Method" duration-ms="2543" started-at="2019-01-09T07:43:51Z" data-provider="dataProvider" finished-at="2019-01-09T07:43:54Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.edr.businesscomponents.EdrFlow1@5c18298f]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-14T07:03:20Z" finished-at="2019-01-14T07:03:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="API_Method(com.edr.models.TestDataOneModel)[pri:0, instance:com.edr.businesscomponents.EdrFlow1@5c18298f]" name="API_Method" duration-ms="2392" started-at="2019-01-14T07:03:20Z" data-provider="dataProvider" finished-at="2019-01-14T07:03:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[com.edr.models.TestDataOneModel@6bb2773b]]>
+                <![CDATA[com.edr.models.TestDataOneModel@75acacfc]]>
               </value>
             </param>
           </params>
@@ -54,11 +58,19 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- API_Method -->
-        <test-method status="FAIL" signature="API_Method(com.edr.models.TestDataOneModel)[pri:0, instance:com.edr.businesscomponents.EdrFlow1@31f924f5]" name="API_Method" duration-ms="2575" started-at="2019-01-09T07:43:51Z" data-provider="dataProvider" finished-at="2019-01-09T07:43:54Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.edr.businesscomponents.EdrFlow1@5c18298f]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-14T07:03:20Z" finished-at="2019-01-14T07:03:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.edr.businesscomponents.EdrFlow1@5c18298f]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-14T07:03:20Z" finished-at="2019-01-14T07:03:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="API_Method(com.edr.models.TestDataOneModel)[pri:0, instance:com.edr.businesscomponents.EdrFlow1@5c18298f]" name="API_Method" duration-ms="2332" started-at="2019-01-14T07:03:20Z" data-provider="dataProvider" finished-at="2019-01-14T07:03:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[com.edr.models.TestDataOneModel@37c46c21]]>
+                <![CDATA[com.edr.models.TestDataOneModel@52460501]]>
               </value>
             </param>
           </params>
@@ -94,15 +106,11 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- API_Method -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.edr.businesscomponents.EdrFlow1@31f924f5]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-09T07:43:51Z" finished-at="2019-01-09T07:43:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="API_Method(com.edr.models.TestDataOneModel)[pri:0, instance:com.edr.businesscomponents.EdrFlow1@31f924f5]" name="API_Method" duration-ms="2543" started-at="2019-01-09T07:43:51Z" data-provider="dataProvider" finished-at="2019-01-09T07:43:54Z">
+        <test-method status="FAIL" signature="API_Method(com.edr.models.TestDataOneModel)[pri:0, instance:com.edr.businesscomponents.EdrFlow1@5c18298f]" name="API_Method" duration-ms="2348" started-at="2019-01-14T07:03:20Z" data-provider="dataProvider" finished-at="2019-01-14T07:03:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[com.edr.models.TestDataOneModel@1aacb61e]]>
+                <![CDATA[com.edr.models.TestDataOneModel@2b6ef93e]]>
               </value>
             </param>
           </params>
@@ -138,19 +146,11 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- API_Method -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.edr.businesscomponents.EdrFlow1@31f924f5]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-09T07:43:51Z" finished-at="2019-01-09T07:43:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.edr.businesscomponents.EdrFlow1@31f924f5]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-09T07:43:51Z" finished-at="2019-01-09T07:43:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="API_Method(com.edr.models.TestDataOneModel)[pri:0, instance:com.edr.businesscomponents.EdrFlow1@31f924f5]" name="API_Method" duration-ms="2543" started-at="2019-01-09T07:43:51Z" data-provider="dataProvider" finished-at="2019-01-09T07:43:54Z">
+        <test-method status="FAIL" signature="API_Method(com.edr.models.TestDataOneModel)[pri:0, instance:com.edr.businesscomponents.EdrFlow1@5c18298f]" name="API_Method" duration-ms="2348" started-at="2019-01-14T07:03:20Z" data-provider="dataProvider" finished-at="2019-01-14T07:03:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[com.edr.models.TestDataOneModel@5993ff30]]>
+                <![CDATA[com.edr.models.TestDataOneModel@5abba7c4]]>
               </value>
             </param>
           </params>
@@ -186,15 +186,15 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- API_Method -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.edr.businesscomponents.EdrFlow1@31f924f5]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-09T07:43:51Z" finished-at="2019-01-09T07:43:51Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.edr.businesscomponents.EdrFlow1@5c18298f]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-14T07:03:20Z" finished-at="2019-01-14T07:03:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="API_Method(com.edr.models.TestDataOneModel)[pri:0, instance:com.edr.businesscomponents.EdrFlow1@31f924f5]" name="API_Method" duration-ms="2543" started-at="2019-01-09T07:43:51Z" data-provider="dataProvider" finished-at="2019-01-09T07:43:54Z">
+        <test-method status="FAIL" signature="API_Method(com.edr.models.TestDataOneModel)[pri:0, instance:com.edr.businesscomponents.EdrFlow1@5c18298f]" name="API_Method" duration-ms="2332" started-at="2019-01-14T07:03:20Z" data-provider="dataProvider" finished-at="2019-01-14T07:03:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[com.edr.models.TestDataOneModel@59bac32a]]>
+                <![CDATA[com.edr.models.TestDataOneModel@2bc75046]]>
               </value>
             </param>
           </params>
@@ -230,19 +230,15 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- API_Method -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.edr.businesscomponents.EdrFlow1@31f924f5]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-09T07:43:51Z" finished-at="2019-01-09T07:43:51Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.edr.businesscomponents.EdrFlow1@5c18298f]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-14T07:03:20Z" finished-at="2019-01-14T07:03:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.edr.businesscomponents.EdrFlow1@31f924f5]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-09T07:43:51Z" finished-at="2019-01-09T07:43:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="API_Method(com.edr.models.TestDataOneModel)[pri:0, instance:com.edr.businesscomponents.EdrFlow1@31f924f5]" name="API_Method" duration-ms="2543" started-at="2019-01-09T07:43:51Z" data-provider="dataProvider" finished-at="2019-01-09T07:43:54Z">
+        <test-method status="FAIL" signature="API_Method(com.edr.models.TestDataOneModel)[pri:0, instance:com.edr.businesscomponents.EdrFlow1@5c18298f]" name="API_Method" duration-ms="2363" started-at="2019-01-14T07:03:20Z" data-provider="dataProvider" finished-at="2019-01-14T07:03:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[com.edr.models.TestDataOneModel@4d347d2e]]>
+                <![CDATA[com.edr.models.TestDataOneModel@4d27a5f8]]>
               </value>
             </param>
           </params>
@@ -278,11 +274,19 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- API_Method -->
-        <test-method status="FAIL" signature="API_Method(com.edr.models.TestDataOneModel)[pri:0, instance:com.edr.businesscomponents.EdrFlow1@31f924f5]" name="API_Method" duration-ms="2481" started-at="2019-01-09T07:43:51Z" data-provider="dataProvider" finished-at="2019-01-09T07:43:54Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.edr.businesscomponents.EdrFlow1@5c18298f]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-14T07:03:20Z" finished-at="2019-01-14T07:03:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.edr.businesscomponents.EdrFlow1@5c18298f]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-14T07:03:20Z" finished-at="2019-01-14T07:03:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="API_Method(com.edr.models.TestDataOneModel)[pri:0, instance:com.edr.businesscomponents.EdrFlow1@5c18298f]" name="API_Method" duration-ms="2332" started-at="2019-01-14T07:03:20Z" data-provider="dataProvider" finished-at="2019-01-14T07:03:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[com.edr.models.TestDataOneModel@292837c5]]>
+                <![CDATA[com.edr.models.TestDataOneModel@6b028d70]]>
               </value>
             </param>
           </params>
@@ -318,19 +322,15 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- API_Method -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.edr.businesscomponents.EdrFlow1@31f924f5]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-09T07:43:51Z" finished-at="2019-01-09T07:43:51Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.edr.businesscomponents.EdrFlow1@5c18298f]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-14T07:03:20Z" finished-at="2019-01-14T07:03:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.edr.businesscomponents.EdrFlow1@31f924f5]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-09T07:43:51Z" finished-at="2019-01-09T07:43:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="API_Method(com.edr.models.TestDataOneModel)[pri:0, instance:com.edr.businesscomponents.EdrFlow1@31f924f5]" name="API_Method" duration-ms="2544" started-at="2019-01-09T07:43:51Z" data-provider="dataProvider" finished-at="2019-01-09T07:43:54Z">
+        <test-method status="FAIL" signature="API_Method(com.edr.models.TestDataOneModel)[pri:0, instance:com.edr.businesscomponents.EdrFlow1@5c18298f]" name="API_Method" duration-ms="2332" started-at="2019-01-14T07:03:20Z" data-provider="dataProvider" finished-at="2019-01-14T07:03:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[com.edr.models.TestDataOneModel@2a2b8380]]>
+                <![CDATA[com.edr.models.TestDataOneModel@69a985a4]]>
               </value>
             </param>
           </params>
@@ -366,59 +366,59 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- API_Method -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.edr.businesscomponents.EdrFlow1@31f924f5]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-09T07:43:51Z" finished-at="2019-01-09T07:43:51Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.edr.businesscomponents.EdrFlow1@5c18298f]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-14T07:03:20Z" finished-at="2019-01-14T07:03:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="API_Method(com.edr.models.TestDataOneModel)[pri:0, instance:com.edr.businesscomponents.EdrFlow1@31f924f5]" name="API_Method" duration-ms="2512" started-at="2019-01-09T07:43:51Z" data-provider="dataProvider" finished-at="2019-01-09T07:43:54Z">
+        <test-method status="FAIL" signature="API_Method(com.edr.models.TestDataOneModel)[pri:0, instance:com.edr.businesscomponents.EdrFlow1@5c18298f]" name="API_Method" duration-ms="2360" started-at="2019-01-14T07:03:20Z" data-provider="dataProvider" finished-at="2019-01-14T07:03:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[com.edr.models.TestDataOneModel@38b89fba]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at org.testng.Assert.assertTrue(Assert.java:54)
+at com.edr.businesscomponents.EdrFlow1.API_Method(EdrFlow1.java:43)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- API_Method -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.edr.businesscomponents.EdrFlow1@5c18298f]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-14T07:03:21Z" finished-at="2019-01-14T07:03:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="API_Method(com.edr.models.TestDataOneModel)[pri:0, instance:com.edr.businesscomponents.EdrFlow1@5c18298f]" name="API_Method" duration-ms="2285" started-at="2019-01-14T07:03:21Z" data-provider="dataProvider" finished-at="2019-01-14T07:03:23Z">
           <params>
             <param index="0">
               <value>
                 <![CDATA[com.edr.models.TestDataOneModel@1f8debb0]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertTrue(Assert.java:44)
-at org.testng.Assert.assertTrue(Assert.java:54)
-at com.edr.businesscomponents.EdrFlow1.API_Method(EdrFlow1.java:43)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
-at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
-at java.util.concurrent.FutureTask.run(Unknown Source)
-at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
-at java.util.concurrent.FutureTask.run(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- API_Method -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.edr.businesscomponents.EdrFlow1@31f924f5]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-09T07:43:51Z" finished-at="2019-01-09T07:43:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="API_Method(com.edr.models.TestDataOneModel)[pri:0, instance:com.edr.businesscomponents.EdrFlow1@31f924f5]" name="API_Method" duration-ms="2528" started-at="2019-01-09T07:43:51Z" data-provider="dataProvider" finished-at="2019-01-09T07:43:54Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[com.edr.models.TestDataOneModel@ca19b0c]]>
               </value>
             </param>
           </params>

@@ -14,19 +14,39 @@ public class TestSuiteModel {
 	    @JacksonXmlProperty(isAttribute = true)
 	    private String name;
 
+	    @JacksonXmlProperty(localName = "listeners")
+	    @JacksonXmlElementWrapper(useWrapping = false)
+	    private List < Listeners > listeners;
+	    
 	    @JacksonXmlProperty(localName = "test")
 	    @JacksonXmlElementWrapper(useWrapping = false)
 	    private List < Test > tests;
 
 	    public Suite(String name) {
 	        this.name = name;
+	        this.listeners = new ArrayList<Suite.Listeners>();
 	        this.tests = new ArrayList < Suite.Test > ();
+	    }
+	    
+	    public void addListeners(List<String> listenerList) {
+	    	Listeners listeners = new Listeners();
+	    	for(String l : listenerList) {
+	    		listeners.addListeners(l);
+	    	}	  
+	    	this.listeners.add(listeners);
 	    }
 
 	    public void addTest(String testname, String paramName, String paramValue, String className,
 	    		String methodName,String groupName,String dependsOn) {
 	        Test test = new Test(testname);
-	        test.addParam(paramName, paramValue);
+	        
+	        String [] paramNameArray = paramName.split(",");
+	        String [] paramValueArray = paramValue.split(",");
+	        for(int i=0;i<paramNameArray.length;i++) {
+	        	test.addParam(paramNameArray[i], paramValueArray[i]);
+	        }
+	        
+	        
 	        String [] groupNameArray = groupName.split(",");
 	        String [] dependsOnArray = dependsOn.split(",");
 	        for(int i=0;i<groupNameArray.length;i++) {
@@ -40,14 +60,35 @@ public class TestSuiteModel {
 	        }	        
 	        this.tests.add(test);
 	    }
+	    class Listeners {
+	    	@JacksonXmlProperty(localName = "listener")
+	    	@JacksonXmlElementWrapper(useWrapping = false)
+	        private List<Listener> classNameList;
+	    	
+	    	public Listeners() {
+	    		this.classNameList = new ArrayList<Suite.Listener>();
+	    	}
 
+	        public void addListeners(String className) {
+	            this.classNameList.add(new Listener(className));
+	        }
+	    }
+	    class Listener {
+	    	@JacksonXmlProperty(isAttribute = true,localName = "class-name")
+	        private String className;
+	    	
+	    	public Listener(String className) {
+	    		this.className  = className;
+	    	}	    	
+	    }
 	    class Test {
 
 	        @JacksonXmlProperty(isAttribute = true)
 	        private String name;
 
 	        @JacksonXmlProperty(localName = "parameter")
-	        private Parameter param;
+	        @JacksonXmlElementWrapper(useWrapping = false)
+	        private List<Parameter> params;
 
 	        @JacksonXmlProperty(localName = "groups")
 	        private Groups groups;
@@ -59,10 +100,11 @@ public class TestSuiteModel {
 	            this.name = name;
 	            classes = new Classes();
 	            groups = new Groups();
+	            params = new ArrayList<Suite.Parameter>();
 	        }
 
-	        public void addParam(String name, String value) {
-	            param = new Parameter(name, value);
+	        public void addParam(String paramName,String paramValue) {	        	
+	        	params.add(new Parameter(paramName,paramValue));
 	        }
 	        
 	        public void addGroups(String groupName,String dependsOn) {	
@@ -74,6 +116,19 @@ public class TestSuiteModel {
 	        }
 	    }
 
+//	    class Parameters {
+//	    	@JacksonXmlProperty(localName = "parameter")
+//	        @JacksonXmlElementWrapper(useWrapping = false)
+//	        private List<Parameter> parameterList;
+//
+//	        public Parameters() {
+//	            this.parameterList = new ArrayList<Suite.Parameter>();
+//	        }
+//	        
+//	        public void addParameter(String name, String value) {
+//	        	parameterList.add(new Parameter(name, value));
+//	        }
+//	    }
 	    class Parameter {
 	        @JacksonXmlProperty(isAttribute = true)
 	        private String name;
@@ -85,9 +140,7 @@ public class TestSuiteModel {
 	            this.name = name;
 	            this.value = value;
 	        }
-
 	    }
-	    
 	    class Groups {	 
 	        @JacksonXmlProperty(localName = "dependencies")
 	        @JacksonXmlElementWrapper(useWrapping = false)

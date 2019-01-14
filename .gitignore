@@ -1,0 +1,9 @@
+.classpath
+.settings/
+*.bak
+.target/*
+.test-output/*
+*.jar
+*.war
+*.ear
+*.class
