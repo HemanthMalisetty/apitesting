@@ -1,1 +1,23 @@
-<suite name="RegressionPack"><listeners><listener class-name="com.edr.testnglisteners.TestListener"/></listeners><test name="Exception_1"><parameter name="testId" value="1"/><parameter name="stepId" value="1"/><parameter name="sheetName" value="Test_Data1"/><groups><dependencies><group name="" depends-on=""/></dependencies></groups><classes><class name="com.edr.businesscomponents.EdrFlow1"><methods><include name="API_Method"/></methods></class></classes></test></suite>
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="RegressionPack">
+   <listeners>
+      <listener class-name="com.edr.testnglisteners.TestListener" />
+   </listeners>
+   <test name="Exception_1">
+      <parameter name="testId" value="1" />
+      <parameter name="stepId" value="1" />
+      <parameter name="sheetName" value="Test_Data1" />
+      <groups>
+         <dependencies>
+            <group name="" depends-on="" />
+         </dependencies>
+      </groups>
+      <classes>
+         <class name="com.edr.businesscomponents.EdrFlow1">
+            <methods>
+               <include name="API_Method" />
+            </methods>
+         </class>
+      </classes>
+   </test>
+</suite>

@@ -13,6 +13,7 @@ import com.edr.models.TestSuiteModel;
 import com.edr.models.TestSuiteModel.Suite;
 import com.edr.utils.Config;
 import com.edr.utils.Excel;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
 public class Runner {
@@ -147,6 +148,7 @@ public class Runner {
 		 */
 		try {
 			XmlMapper xmlMapper = new XmlMapper();
+			xmlMapper.enable(SerializationFeature.INDENT_OUTPUT);
 			xmlMapper.writeValue(new File("src/test/resources/testng-suite.xml"), suite);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

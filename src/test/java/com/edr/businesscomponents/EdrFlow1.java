@@ -35,32 +35,34 @@ public class EdrFlow1 extends BaseClass {
 		 * Call all your APIs here and handle dependencies between APIs by setting canContinue by end of each API
 		 * Create as many static variables as needed to share data between methods
 		 */
+		
 		edrFlow1 = new EdrFlow1();
-		API_ONE(testDataOne);
-		API_TWO(testDataOne);
+		String op1 = API_ONE(testDataOne);
+		API_TWO(testDataOne,op1);
 		API_THREE(testDataOne);
 		API_FOUR(testDataOne);		
 		Assert.assertTrue(canContinue);
 	}
 	
-	public void API_ONE(TestDataOneModel testDataOne) {	
+	public String API_ONE(TestDataOneModel testDataOne) {	
 			canContinue = true;
 			//Hit the API-1
 			System.out.println("API_ONE->INSTANCE-ID:" + testDataOne.getInstanceId() + "->THREAD-ID:" + Thread.currentThread().getId());
 			RestAssured.when().
 			request(testDataOne.getMethod(),testDataOne.getUrlTemplate())
 			.then()
-			.statusCode(200)
+			.statusCode(Integer.parseInt(testDataOne.getExpectedOutput()))
 			.log().all();
-			//edrFlow1.getTest().get().log(Status.PASS, json);
-			
+			return "";
+			//edrFlow1.getTest().get().log(Status.PASS, json);			
 			//canContinue = false; //set this if API-1 didn't return as expected
 	}
-	public void API_TWO(TestDataOneModel testDataOne) {
+	public void API_TWO(TestDataOneModel testDataOne,String op1) {
 		if(canContinue) {
 			//Hit the API-2
 			if(testDataOne.getUrlParmOne().equals("100")) {
 				edrFlow1.getTest().get().log(Status.PASS, testDataOne.getUrlParmOne());	
+				edrFlow1.getTest().get().log(Status.INFO, "");
 			}else {
 				edrFlow1.getTest().get().log(Status.FAIL, testDataOne.getUrlParmOne());
 				canContinue = false; //set this if API-2 didn't return as expected
