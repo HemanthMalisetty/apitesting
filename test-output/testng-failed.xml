@@ -11,9 +11,12 @@
     <classes>
       <class name="com.edr.businesscomponents.EdrFlow1">
         <methods>
+          <include name="setUpTest"/>
+          <include name="terminate"/>
+          <include name="tearDown"/>
           <include name="init"/>
           <include name="beforeMethod"/>
-          <include name="API_Method" invocation-numbers="3 7 8 9 1 4 5 2 6 0"/>
+          <include name="API_Method" invocation-numbers="0 1 8 4 2 5 7 3 9 6"/>
         </methods>
       </class> <!-- com.edr.businesscomponents.EdrFlow1 -->
     </classes>

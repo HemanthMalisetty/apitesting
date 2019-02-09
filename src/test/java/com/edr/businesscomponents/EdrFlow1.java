@@ -1,5 +1,8 @@
 package com.edr.businesscomponents;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.DataProvider;
@@ -11,6 +14,7 @@ import com.aventstack.extentreports.Status;
 import com.edr.models.TestDataOneModel;
 import com.edr.reporting.ExtentManager;
 import com.edr.testnglisteners.TestListener;
+import com.edr.utils.Config;
 import com.edr.utils.Excel;
 
 import io.restassured.RestAssured;
@@ -20,8 +24,10 @@ public class EdrFlow1 extends BaseClass {
 
 	public static boolean canContinue = true;
 	public EdrFlow1 edrFlow1;
+	public String crnNumber;
 	
-	@DataProvider(name = "dataProvider",parallel = true)
+	@DataProvider(name = "dataProvider")
+	//@DataProvider(name = "dataProvider",parallel = true)
 	public Object[][] provideTestParam(ITestContext context) throws Exception {
 		Object[][] obj = Excel.getTableArray(context.getCurrentXmlTest().getParameter("sheetName"),
 	    		Integer.parseInt(context.getCurrentXmlTest().getParameter("testId")),
@@ -35,15 +41,26 @@ public class EdrFlow1 extends BaseClass {
 		 * Call all your APIs here and handle dependencies between APIs by setting canContinue by end of each API
 		 * Create as many static variables as needed to share data between methods
 		 */
-		
-		edrFlow1 = new EdrFlow1();
+		try {
+		edrFlow1 = new EdrFlow1();		
+		crnNumber = getCRN();
+		System.out.println("CRN No:" + crnNumber);
 		String op1 = API_ONE(testDataOne);
 		API_TWO(testDataOne,op1);
 		API_THREE(testDataOne);
 		API_FOUR(testDataOne);		
 		Assert.assertTrue(canContinue);
+		} catch (MalformedURLException e) {
+			System.out.println(e.toString());
+			e.printStackTrace();
+		}
 	}
 	
+	private String getCRN() throws MalformedURLException {
+		getDriver().navigate().to(new URL(Config.getProperty("DEV_DIGITAL_URL")));
+		return "CRN10000";		
+	}
+
 	public String API_ONE(TestDataOneModel testDataOne) {	
 			canContinue = true;
 			//Hit the API-1
